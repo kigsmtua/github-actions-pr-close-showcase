@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo ${{ github.event.pull_request.head.ref }}
+        BRANCH=${{ github.event.pull_request.head.ref }}
+        echo $BRANCH
         echo PR #${{ github.event.number }} has been merged
 
   close_job:
